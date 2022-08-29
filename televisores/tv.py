@@ -10,9 +10,8 @@ class TV:
         self.estado = estado
         self.volumen = 1
         self.control = None
-    @classmethod
-    def aumentar(cls):
-        cls.numTV += 1
+        TV.numTV += 1
+
  
     def setMarca(self, marca):
         self.numero = marca
