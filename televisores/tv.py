@@ -38,11 +38,13 @@ class TV:
             self.volumen = volumen
     def getVolumen(self):
         return self.volumen
-    def getNumTV(self):
-        return TV.numTV
-    def setNumTV(self, numTV):
+    @classmethod
+    def getNumTV(cls):
+        return cls.numTV
+    @classmethod 
+    def setNumTV(cls, numTV):
         if numTV>=0:
-            TV.numTV = numTV
+            cls.numTV = numTV
     def turnOn(self):
         if self.estado == False:
             self.estado = True
